@@ -1,0 +1,6 @@
+{
+  "name": "Interactive Zoo Park Guide",
+  "description": "An immersive interactive showcase of 12 distinct wildlife zones, complete with curated animal guides, live show schedules, feeding virtual simulations, animal maps, and a panoramic park navigation path.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

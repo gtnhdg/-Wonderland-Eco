@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* 🚀 High-performance sub-pixel smooth wiggle micro-animation that runs exactly once on hover */
+@keyframes animal-wiggle {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  15% {
+    transform: rotate(-3deg) scale(1.04);
+  }
+  30% {
+    transform: rotate(2.5deg) scale(1.04);
+  }
+  45% {
+    transform: rotate(-2deg) scale(1.04);
+  }
+  60% {
+    transform: rotate(1.5deg) scale(1.04);
+  }
+  75% {
+    transform: rotate(-1deg) scale(1.04);
+  }
+  90% {
+    transform: rotate(0.5deg) scale(1.04);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.04);
+  }
+}
+
+.animate-animal-wiggle {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
+}
+
+.animate-animal-wiggle:hover {
+  animation: animal-wiggle 0.7s ease-in-out forwards;
+}
+
+/* Custom wing flapping and perching animation for the bird companion */
+@keyframes swallow-wing-left-flap {
+  0% {
+    transform: rotate(28deg) scaleY(0.85);
+  }
+  100% {
+    transform: rotate(-35deg) scaleY(1.05) translateY(-1px);
+  }
+}
+
+@keyframes swallow-wing-right-flap {
+  0% {
+    transform: rotate(-28deg) scaleY(0.85);
+  }
+  100% {
+    transform: rotate(35deg) scaleY(1.05) translateY(-1px);
+  }
+}
+
+.swallow-wing-left {
+  transform-origin: 30px 18px;
+  animation: swallow-wing-left-flap 0.1s infinite alternate ease-in-out;
+  will-change: transform;
+}
+
+.swallow-wing-right {
+  transform-origin: 34px 18px;
+  animation: swallow-wing-right-flap 0.1s infinite alternate ease-in-out;
+  will-change: transform;
+}
+
+@keyframes bird-rest {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.03, 0.97) translateY(1.2px); /* Gentle breath bobbing */
+  }
+}
+
+.animate-bird-rest {
+  animation: bird-rest 2.2s infinite ease-in-out;
+}
+
+/* 🦊 Micro-animations for exquisite decorative corner elements on parent hover */
+@keyframes corner-hop {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.1) rotate(4deg);
+  }
+}
+
+@keyframes corner-sway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.08);
+  }
+}
+
+@keyframes corner-scurry {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(2px) translateY(-1px);
+  }
+}
+
+/* Make elements animate beautifully on .group hover in parent image frames */
+.group:hover .animate-corner-hop {
+  animation: corner-hop 1.2s infinite ease-in-out;
+}
+
+.group:hover .animate-corner-sway {
+  animation: corner-sway 1.8s infinite ease-in-out;
+}
+
+.group:hover .animate-corner-scurry {
+  animation: corner-scurry 0.9s infinite ease-in-out;
+}
+
+
